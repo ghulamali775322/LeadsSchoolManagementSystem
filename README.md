@@ -56,7 +56,7 @@ A full-featured School Management System built using ASP.NET Core MVC and Entity
 - Add email/SMS notification system
 
 # 🙋‍♂️ Author
-Muhammad Rahat    
+Ghulam Ali    
 Email: ghulamali5322@gmail.com  
 GitHub: [github.com/ghulamali775322](https://github.com/ghulamali775322))
 
