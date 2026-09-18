@@ -1,0 +1,12 @@
+{
+    "Logging": {
+        "LogLevel": {
+            "Default": "Information",
+            "Microsoft.AspNetCore": "Warning"
+        }
+    },
+    "ConnectionStrings": {
+        "DefaultConnection": "Server=DESKTOP-8BL3MIG\\SQLEXPRESS01;Database=LeadsSMS;Trusted_Connection=True;TrustServerCertificate=True;MultipleActiveResultSets=true"
+    },
+    "AllowedHosts": "*"
+}
