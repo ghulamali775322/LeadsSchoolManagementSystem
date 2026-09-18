@@ -57,7 +57,7 @@ A full-featured School Management System built using ASP.NET Core MVC and Entity
 
 # 🙋‍♂️ Author
 Muhammad Rahat    
-Email: muhammadrahat060@gmail.com  
-GitHub: [github.com/MuhammadRahat1](https://github.com/MuhammadRahat1)
+Email: ghulamali5322@gmail.com  
+GitHub: [github.com/ghulamali775322](https://github.com/ghulamali775322))
 
 
