@@ -1,0 +1,43 @@
+﻿@model LeadsSMS.Models.EmployeeAttendance
+
+@{
+    ViewData["Title"] = "Mark Attendance";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Mark Attendance</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label for="EmployeeId">Employee</label>
+        <select asp-for="EmployeeId" class="form-control" asp-items="new SelectList(ViewBag.Employees, nameof(LeadsSMS.Models.Employee.Id), nameof(LeadsSMS.Models.Employee.FullName))">
+            <option value="">-- Select Employee --</option>
+        </select>
+        <span asp-validation-for="EmployeeId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="AttendanceDate"></label>
+        <input asp-for="AttendanceDate" class="form-control" />
+        <span asp-validation-for="AttendanceDate" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Status"></label>
+        <select asp-for="Status" class="form-control">
+            <option value="">-- Select Status --</option>
+            <option>Present</option>
+            <option>Absent</option>
+            <option>Leave</option>
+        </select>
+        <span asp-validation-for="Status" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

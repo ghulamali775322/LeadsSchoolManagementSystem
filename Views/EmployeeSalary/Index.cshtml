@@ -1,0 +1,32 @@
+﻿@model List<LeadsSMS.Models.EmployeeSalary>
+
+@{
+    ViewData["Title"] = "Salary Records";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Salary Records</h2>
+
+<a asp-action="Create" class="btn btn-success mb-2">Pay Salary</a>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Employee ID</th>
+            <th>Amount</th>
+            <th>Payment Date</th>
+            <th>Payment Method</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var record in Model)
+        {
+            <tr>
+                <td>@record.EmployeeId</td>
+                <td>@record.Amount.ToString("C")</td>
+                <td>@record.PaymentDate.ToShortDateString()</td>
+                <td>@record.PaymentMethod</td>
+            </tr>
+        }
+    </tbody>
+</table>

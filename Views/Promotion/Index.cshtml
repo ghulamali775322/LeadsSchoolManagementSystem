@@ -1,0 +1,37 @@
+﻿@model List<LeadsSMS.Models.Student>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Promote Students";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Current Class</th>
+            <th>New Class</th>
+            <th>Promote</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <form asp-action="Promote" method="post">
+                <td>@student.FullName</td> <!-- Corrected to FullName -->
+                <td>@student.ClassName</td> <!-- Corrected to ClassName -->
+                <td>
+                    <input type="hidden" name="studentId" value="@student.Id" />
+                    <input type="text" name="toClass" class="form-control" required />
+                </td>
+                <td>
+                    <button type="submit" class="btn btn-primary">Promote</button>
+                </td>
+                </form>
+            </tr>
+        }
+    </tbody>
+</table>

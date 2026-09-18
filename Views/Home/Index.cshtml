@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var currentTime = DateTime.Now.ToString("dddd, dd MMMM yyyy - hh:mm tt");
+}
+
+<div class="p-3 mb-3 text-white rounded shadow" style="background: linear-gradient(135deg, #007bff, #6610f2); animation: fadeIn 1s ease-in;">
+    <div class="text-center">
+        <h5 class="display-4 fw-bold mb-3">
+            <i class="fas fa-school me-2"></i> Leads School Management System
+        </h5>
+        <small class="fst-italic">📅 @currentTime</small>
+    </div>
+</div>
+
+
+
+
+<div class="row g-4">
+    <!-- Student Card -->
+    <div class="col-md-6 col-lg-4">
+        <div class="card shadow-sm border-0 h-100">
+            <div class="card-body text-center">
+                <i class="fas fa-user-graduate fa-3x text-primary mb-3"></i>
+                <h5 class="card-title">Students</h5>
+                <p class="card-text">Manage student registrations, promotions, and fee records.</p>
+                <a asp-controller="Student" asp-action="Index" class="btn btn-outline-primary btn-sm m-1">All Students</a>
+                <a asp-controller="Student" asp-action="Create" class="btn btn-outline-success btn-sm m-1">Add Student</a>
+                <a asp-controller="Promotion" asp-action="Index" class="btn btn-outline-warning btn-sm m-1">Promotions</a>
+                <a asp-controller="StudentFee" asp-action="Index" class="btn btn-outline-danger btn-sm m-1">Fee Records</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Employee Card -->
+    <div class="col-md-6 col-lg-4">
+        <div class="card shadow-sm border-0 h-100">
+            <div class="card-body text-center">
+                <i class="fas fa-chalkboard-teacher fa-3x text-success mb-3"></i>
+                <h5 class="card-title">Employees</h5>
+                <p class="card-text">Handle staff registration, attendance, and salaries.</p>
+                <a asp-controller="Employee" asp-action="Index" class="btn btn-outline-primary btn-sm m-1">All Staff</a>
+                <a asp-controller="Employee" asp-action="Create" class="btn btn-outline-success btn-sm m-1">Add Staff</a>
+                <a asp-controller="EmployeeAttendance" asp-action="Index" class="btn btn-outline-warning btn-sm m-1">Attendance</a>
+                <a asp-controller="EmployeeSalary" asp-action="Index" class="btn btn-outline-danger btn-sm m-1">Salaries</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reports / Other (Optional) -->
+    <div class="col-md-6 col-lg-4">
+        <div class="card shadow-sm border-0 h-100">
+            <div class="card-body text-center">
+                <i class="fas fa-chart-line fa-3x text-secondary mb-3"></i>
+                <h5 class="card-title">Reports & Settings</h5>
+                <p class="card-text">Coming soon: generate reports and manage system settings.</p>
+                <a href="#" class="btn btn-outline-secondary btn-sm m-1 disabled">Reports</a>
+                <a href="#" class="btn btn-outline-dark btn-sm m-1 disabled">Settings</a>
+            </div>
+        </div>
+    </div>
+</div>
+
